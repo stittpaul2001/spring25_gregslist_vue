@@ -12,6 +12,13 @@ class JobsServices {
         const jobs = response.data.map(pojo => new Job(pojo))
         AppState.jobs = jobs
     }
+
+    async createJob(jobData) {
+        const response = await api.post('api/jobs', jobData)
+        logger.log('CREATED JOB', response.data)
+        const job = new Job(response.data)
+        AppState.jobs.push(job)
+    }
 }
 
 export const jobsServices = new JobsServices()

@@ -8,6 +8,9 @@ export class House {
         this.levels = data.levels
         this.price = data.price
         this.description = data.description
+        this.imgUrl = data.imgUrl
+        this.location = data.location
+
 
 
     }

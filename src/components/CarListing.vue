@@ -38,7 +38,8 @@ async function deleteCar(carId) {
       <div class="p-3 h-100 d-flex flex-column justify-content-between">
         <div>
           <div class="d-flex justify-content-between">
-            <p class="fs-3">{{ carProp.year }} {{ carProp.make }} {{ carProp.model }}</p>
+            <p class="fs-3">{{ carProp.year }}
+              {{ carProp.make }} {{ carProp.model }}</p>
             <small>{{ carProp.createdAt.toLocaleDateString() }}</small>
           </div>
           <p class="fs-3">{{ '$' + carProp.price.toLocaleString() }}</p>
